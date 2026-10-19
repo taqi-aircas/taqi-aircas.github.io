@@ -7,28 +7,48 @@
   <title>Chenqian Tang · Academic Profile</title>
   <style>
     * { box-sizing: border-box; }
-    body { max-width: 720px; margin: 0 auto; padding: 64px 24px; background: #fff; color: #252525; font: 16px/1.7 system-ui, sans-serif; }
-    h1 { font-size: 30px; line-height: 1.2; margin: 0 0 10px; font-weight: 600; letter-spacing: -.6px; }
-    h2 { font-size: 18px; margin: 0 0 10px; font-weight: 600; }
+    html { scroll-padding-top: 24px; }
+    body { max-width: 820px; margin: 0 auto; padding: 60px 32px; background: #fff; color: #30363d; font: 14px/1.85 Verdana, Geneva, sans-serif; }
+    h1 { margin: 0 0 10px; color: #172b40; font-size: 34px; line-height: 1.25; font-weight: 700; letter-spacing: -1px; }
+    h2 { margin: 0 0 16px; padding-bottom: 7px; border-bottom: 1px solid #e3e8ed; color: #172b40; font-size: 20px; line-height: 1.5; font-weight: 700; letter-spacing: -.4px; }
+    h3 { margin: 24px 0 12px; color: #536b80; font-size: 14px; font-weight: 700; }
     p { margin: 0 0 12px; }
-    a { color: #245e91; text-underline-offset: 3px; }
+    a { color: #28608e; text-underline-offset: 3px; }
+    a:hover { color: #153c5d; text-decoration: underline; }
+    a:focus-visible { outline: 2px solid #28608e; outline-offset: 4px; }
     a[href^="mailto:"] { overflow-wrap: anywhere; }
-    a:hover { color: #123c60; }
-    a:focus-visible { outline: 2px solid #245e91; outline-offset: 4px; }
-    header { padding-bottom: 28px; border-bottom: 1px solid #e8e8e8; }
-    .muted { color: #777; font-size: 14px; }
-    nav { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 14px; font-size: 14px; }
+    header { padding-bottom: 24px; border-bottom: 2px solid #d9e2ea; }
+    .muted { color: #626d78; font-size: 12px; }
+    header .muted { font-size: 13px; }
+    nav { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 18px; font-size: 12px; font-weight: 700; }
     nav a { text-decoration: none; }
-    section { margin-top: 28px; }
-    h3 { font-size: 15px; margin: 24px 0 12px; color: #777; font-weight: 500; }
-    .research-interests { padding-left: 20px; }
-    .research-interests li { margin-bottom: 10px; padding-left: 4px; }
-    .publications { padding-left: 20px; }
-    .publications li { margin-bottom: 18px; padding-left: 4px; }
-    footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #e8e8e8; font-size: 13px; }
+    section { margin-top: 32px; }
+    #about .muted { color: #30363d; font-size: 14px; }
+    .research-interests, .education { margin: 0; padding-left: 20px; }
+    .research-interests li, .education li { margin-bottom: 12px; padding-left: 5px; }
+    .research-interests li::marker, .education li::marker { color: #536b80; }
+    .education-row { display: flex; justify-content: space-between; align-items: baseline; gap: 8px 24px; }
+    .education strong { font-size: 13px; font-weight: 700; }
+    .education-date { flex-shrink: 0; color: #626d78; font-size: 12px; font-variant-numeric: tabular-nums; }
+    .education-note { color: #7b8490; font-size: 11px; }
+    .publications { padding-left: 23px; margin: 0; }
+    .publications li { margin-bottom: 20px; padding-left: 5px; }
+    .publications li::marker { color: #78838d; font-size: 12px; }
+    .publications li > a { font-weight: 700; font-size: 13px; text-decoration: none; line-height: 1.65; }
+    .publications .muted { line-height: 1.8; }
+    .publications strong { color: #30363d; }
+    .publications em { color: #526376; }
+    footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #e3e8ed; }
     .skip { position: absolute; top: -60px; }
     .skip:focus { top: 8px; background: white; }
-    @media (max-width: 480px) { body { padding: 36px 22px; } h1 { font-size: 27px; } }
+    @media (max-width: 600px) {
+      body { padding: 32px 20px; font-size: 13px; }
+      h1 { font-size: 29px; } h2 { font-size: 18px; }
+      .education-row { display: block; }
+      .education-date { display: block; }
+      #about .muted { font-size: 13px; }
+      nav { gap: 8px 16px; }
+    }
   </style>
 </head>
 <body>
@@ -51,17 +71,19 @@
     </section>
     <section id="research">
       <h2>Research interests</h2>
-      <ol class="research-interests">
+      <ul class="research-interests">
         <li>Using satellite observations to investigate how aerosols acting as ice-nucleating particles (INPs) influence cloud phase.</li>
         <li>Seeking observational evidence for the role of marine organic aerosols as INPs.</li>
-        <li>Developing retrieval algorithms for aerosol and cloud property to study aerosol–cloud interactions (ACI).</li>
-      </ol>
+        <li>Developing retrieval algorithms for aerosol and cloud properties to study aerosol–cloud interactions (ACI).</li>
+      </ul>
     </section>
     <section id="education">
       <h2>Education</h2>
-      <p><strong>University of Oslo</strong><br><span class="muted">2025–Present (2028? We’ll see)</span></p>
-      <p><strong>University of Chinese Academy of Sciences</strong><br><span class="muted">2021–2024</span></p>
-      <p><strong>Southwest Jiaotong University</strong><br><span class="muted">2017–2021</span></p>
+      <ul class="education">
+        <li><div class="education-row"><strong>University of Oslo</strong><span class="education-date">2025–Present <span class="education-note">(2028? We’ll see)</span></span></div></li>
+        <li><div class="education-row"><strong>University of Chinese Academy of Sciences</strong><span class="education-date">2021–2024</span></div></li>
+        <li><div class="education-row"><strong>Southwest Jiaotong University</strong><span class="education-date">2017–2021</span></div></li>
+      </ul>
     </section>
     <section id="publications">
 <h2>Publications</h2>
